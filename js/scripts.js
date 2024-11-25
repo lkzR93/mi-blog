@@ -7,6 +7,8 @@ window.addEventListener('DOMContentLoaded', () => {
     let scrollPos = 0;
     const mainNav = document.getElementById('mainNav');
     const headerHeight = mainNav.clientHeight;
+
+    // Funcionalidad para el desplazamiento de la página (navbar fijo al hacer scroll)
     window.addEventListener('scroll', function() {
         const currentTop = document.body.getBoundingClientRect().top * -1;
         if ( currentTop < scrollPos) {
@@ -14,7 +16,6 @@ window.addEventListener('DOMContentLoaded', () => {
             if (currentTop > 0 && mainNav.classList.contains('is-fixed')) {
                 mainNav.classList.add('is-visible');
             } else {
-                console.log(123);
                 mainNav.classList.remove('is-visible', 'is-fixed');
             }
         } else {
@@ -26,4 +27,30 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         scrollPos = currentTop;
     });
-})
+
+    // Funcionalidad para alternar entre modo claro y oscuro
+    const themeToggle = document.createElement("button");
+    themeToggle.id = "theme-toggle";
+    themeToggle.classList.add("btn", "btn-outline-secondary");
+    themeToggle.textContent = "Toggle Theme";
+    document.querySelector(".navbar-nav").appendChild(themeToggle);
+
+    const htmlElement = document.documentElement;
+
+    // Cargar el tema guardado
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        htmlElement.classList.add(savedTheme);
+    }
+
+    // Alternar entre modos claro y oscuro
+    themeToggle.addEventListener("click", () => {
+        if (htmlElement.classList.contains("dark-mode")) {
+            htmlElement.classList.remove("dark-mode");
+            localStorage.setItem("theme", "");
+        } else {
+            htmlElement.classList.add("dark-mode");
+            localStorage.setItem("theme", "dark-mode");
+        }
+    });
+});
