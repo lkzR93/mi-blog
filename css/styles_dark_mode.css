@@ -1,19 +1,20 @@
-/* styles_dark_mode.css */
+/* Clean Blog - Modo Oscuro */
 
-/* Estilos para el modo oscuro */
+/* Variables de color para el modo oscuro */
 .dark-mode {
     --bs-body-bg: #121212; /* Fondo oscuro */
     --bs-body-color: #e0e0e0; /* Texto claro */
-    --bs-link-color: #bb86fc; /* Enlaces en morado */
+    --bs-link-color: #bb86fc; /* Enlaces morados */
     --bs-link-hover-color: #3700b3; /* Hover oscuro */
     --bs-border-color: #333333; /* Bordes oscuros */
     --bs-highlight-bg: #3e3e3e; /* Fondo de resaltado oscuro */
 }
 
-/* Aquí van los estilos del cuerpo, encabezados, enlaces, etc. en modo oscuro */
+/* Estilos globales para el modo oscuro */
 body.dark-mode {
     background-color: var(--bs-body-bg);
     color: var(--bs-body-color);
+    font-family: 'Open Sans', sans-serif;
 }
 
 a.dark-mode {
@@ -27,6 +28,43 @@ a.dark-mode:hover {
 footer.dark-mode {
     background-color: var(--bs-body-bg);
     color: var(--bs-body-color);
+    border-top: 1px solid var(--bs-border-color);
 }
 
-/* Otros estilos para el modo oscuro... */
+/* Encabezado en modo oscuro */
+.masthead.dark-mode {
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding: 7rem 0 3rem;
+    text-align: center;
+}
+
+.masthead.dark-mode .site-heading,
+.masthead.dark-mode .subheading {
+    color: #e0e0e0;
+}
+
+/* Navbar en modo oscuro */
+.navbar.dark-mode {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.navbar-nav .nav-link.dark-mode {
+    color: #e0e0e0;
+}
+
+.navbar-nav .nav-link.dark-mode:hover {
+    color: var(--bs-link-hover-color);
+}
+
+/* Formulario en modo oscuro */
+.form-floating.dark-mode input, .form-floating.dark-mode textarea {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--bs-border-color);
+}
