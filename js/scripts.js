@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+    console.log("JavaScript cargado correctamente");
     const currentMode = localStorage.getItem('darkMode') || 'light';
     if (currentMode === 'dark') {
         document.body.classList.add('dark-mode');
