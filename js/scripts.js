@@ -1,6 +1,18 @@
 window.addEventListener('DOMContentLoaded', () => {
     console.log("JavaScript cargado correctamente"); // Verifica carga del JS
 
+    // Comprobación del botón y su funcionalidad
+    const toggleButton = document.getElementById('toggle-dark-mode');
+    console.log("Botón encontrado:", toggleButton); // Verifica si el botón es nulo
+
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            console.log("Botón presionado"); // Mensaje esperado al hacer clic
+        });
+    } else {
+        console.error("El botón de alternar modo oscuro no fue encontrado.");
+    }
+
     // Verificar si el modo oscuro está activo al cargar la página
     const currentMode = localStorage.getItem('darkMode') || 'light';
     if (currentMode === 'dark') {
@@ -9,7 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     // Seleccionar el botón y agregar el evento de click
-    const toggleButton = document.getElementById('toggle-dark-mode');
     if (toggleButton) {
         toggleButton.addEventListener('click', () => {
             console.log("Botón presionado"); // Verifica evento click
