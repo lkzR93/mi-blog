@@ -1,0 +1,60 @@
+/* Tipografía Base */
+body {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6,
+.card-title {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.nav-link {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400;
+}
+
+/* Cards */
+.card-text {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Botones */
+.btn {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* Posts */
+article p {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+article blockquote {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 300;
+} 

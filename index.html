@@ -8,10 +8,17 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
     <!-- Google Fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
     <link rel="stylesheet" href="css/dark-theme.css" />
+    <link href="css/light-theme.css" rel="stylesheet" disabled />
+    <link href="css/animations.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="css/typography.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body class="bg-dark text-white">
     <!-- Navbar -->
@@ -40,6 +47,11 @@
 
           <ul class="navbar-nav d-flex flex-row">
             <li class="nav-item me-3 me-lg-0">
+              <button class="btn btn-link nav-link" id="theme-toggle">
+                  <i class="fas fa-moon"></i>
+              </button>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
               <a class="nav-link" href="https://github.com/lkzR93" target="_blank">
                 <i class="fab fa-github"></i>
               </a>
@@ -51,9 +63,9 @@
 
     <main>
         <!-- Jumbotron -->
-        <div id="intro" class="p-5 text-center bg-dark">
-            <h1 class="mb-3 h2">Welcome to Minisland</h1>
-            <p class="mb-3">A personal blog about technology and development</p>
+        <div id="intro" class="p-4 text-center bg-dark mt-5 pt-4">
+            <h1 class="mb-0 h2">Welcome to Minisland</h1>
+            <p class="mb-2">A personal blog about technology and development</p>
         </div>
 
         <div class="container my-5">
@@ -76,7 +88,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">The Origins of Coffee: A Brief History ☕</h5>
                                 <p class="card-text">
-                                    Discover how coffee evolved throughout history - its origins.
+                                    Discover how coffee evolved from Ethiopian forests to become developers' favorite productivity companion.
                                 </p>
                                 <a href="posts/coffee-history.html" class="btn btn-primary" data-mdb-ripple-init>Read</a>
                             </div>
@@ -92,10 +104,8 @@
                                 </a>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Understanding Version Control</h5>
-                                <p class="card-text">
-                                    A deep dive into Git and GitHub - essential tools for modern software development.
-                                </p>
+                                <h5 class="card-title">-</h5>
+                                <p class="card-text">-</p>
                                 <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Read</a>
                             </div>
                         </div>
@@ -110,10 +120,8 @@
                                 </a>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">CSS Best Practices</h5>
-                                <p class="card-text">
-                                    Modern CSS techniques and best practices for creating maintainable stylesheets.
-                                </p>
+                                <h5 class="card-title">-</h5>
+                                <p class="card-text">-</p>
                                 <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Read</a>
                             </div>
                         </div>
@@ -149,5 +157,6 @@
             new mdb.Collapse(element);
         });
     </script>
+    <script src="js/theme-toggle.js"></script>
 </body>
 </html>

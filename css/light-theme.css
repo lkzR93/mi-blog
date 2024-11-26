@@ -1,0 +1,87 @@
+/* Tema claro con tonos café */
+body {
+    background-color: #FDF6EC !important;  /* Beige muy claro */
+    color: #5D4037 !important;  /* Marrón oscuro para texto */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #8D6E63 !important;  /* Marrón medio */
+}
+
+.navbar-brand, .nav-link {
+    color: #FDF6EC !important;  /* Beige claro para contraste */
+}
+
+.navbar-toggler {
+    border-color: #FDF6EC !important;
+}
+
+/* Cards */
+.card {
+    background-color: #FFFFFF !important;
+    border: 1px solid #D7CCC8 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+}
+
+.card-title {
+    color: #5D4037 !important;  /* Marrón oscuro */
+}
+
+.card-text {
+    color: #795548 !important;  /* Marrón medio */
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #795548 !important;  /* Marrón */
+    border-color: #5D4037 !important;
+    color: #FDF6EC !important;
+}
+
+.btn-primary:hover {
+    background-color: #6D4C41 !important;
+    border-color: #5D4037 !important;
+}
+
+/* Footer */
+footer {
+    background-color: #8D6E63 !important;  /* Marrón medio */
+    color: #FDF6EC !important;
+}
+
+footer a {
+    color: #FDF6EC !important;
+}
+
+/* Formularios */
+.form-outline input,
+.form-outline textarea {
+    background-color: #FFF8E1 !important;  /* Beige muy claro */
+    color: #5D4037 !important;
+}
+
+.form-label {
+    color: #795548 !important;
+}
+
+/* Links */
+a {
+    color: #795548 !important;
+}
+
+a:hover {
+    color: #6D4C41 !important;
+}
+
+/* Jumbotron */
+#intro {
+    background-color: #8D6E63 !important;
+    color: #FDF6EC !important;
+}
+
+/* Texto seleccionado */
+::selection {
+    background: #D7CCC8 !important;
+    color: #5D4037 !important;
+} 
