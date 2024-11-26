@@ -73,3 +73,65 @@ a:hover {
 footer {
     color: #d4d4d4 !important;
 }
+
+/* Estilos para el formulario de contacto */
+.form-outline input,
+.form-outline textarea {
+    background-color: rgba(60, 60, 60, 0.7) !important;  /* Fondo más oscuro pero no completamente opaco */
+    color: #e0e0e0 !important;  /* Color de texto más claro */
+}
+
+/* Color del texto de las etiquetas del formulario */
+.form-label {
+    color: #f0d6b7 !important;  /* Mismo tono cálido que usamos en los títulos */
+}
+
+/* Color del texto cuando el campo está activo/enfocado */
+.form-outline input:focus,
+.form-outline textarea:focus {
+    background-color: rgba(70, 70, 70, 0.8) !important;
+    color: #ffffff !important;
+}
+
+/* Estilo para el borde cuando el campo está activo */
+.form-outline .form-control:focus {
+    border-color: #8B4513 !important;  /* Color café para el borde al enfocar */
+    box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25) !important;
+}
+
+/* Color del texto de placeholder */
+.form-outline input::placeholder,
+.form-outline textarea::placeholder {
+    color: #a0a0a0 !important;
+}
+
+/* Estilo para cuando la etiqueta está activa (flotando arriba) */
+.form-outline .form-control:focus~label {
+    color: #f0d6b7 !important;
+}
+
+/* Aseguramos que el texto sea visible cuando se está escribiendo */
+.form-outline .active {
+    color: #f0d6b7 !important;
+}
+
+/* Mejora sutil del contraste para el texto de los posts */
+.card-body p {
+    color: #d4d4d4 !important;  /* Ligeramente más claro que antes */
+}
+
+.card-body ul li {
+    color: #d4d4d4 !important;  /* Mismo color para mantener consistencia */
+}
+
+/* Mantenemos los títulos con el tono cálido pero ligeramente más brillante */
+.card-body h1, 
+.card-body h2, 
+.card-body h3 {
+    color: #f5dfc4 !important;  /* Versión ligeramente más clara del tono cálido anterior */
+}
+
+/* Para el texto enfatizado dentro de los posts */
+.card-body strong {
+    color: #e0e0e0 !important;  /* Un poco más brillante para destacar */
+}
