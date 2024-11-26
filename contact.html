@@ -21,8 +21,14 @@
             <a class="navbar-brand" href="index.html">
                 ☕ Mini
             </a>
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-                aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-mdb-collapse-init
+                data-mdb-target="#navbarExample01"
+                aria-controls="navbarExample01" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarExample01">
@@ -99,6 +105,10 @@
     <script type="module" src="js/mdb.es.min.js"></script>
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Inicializar todos los componentes de MDB
+        document.querySelectorAll('[data-mdb-collapse-init]').forEach((element) => {
+            new mdb.Collapse(element);
+        });
     </script>
 </body>
 </html> 
