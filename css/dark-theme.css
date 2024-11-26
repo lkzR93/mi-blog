@@ -1,6 +1,30 @@
 body {
-    background-color: #121212 !important;
+    background: linear-gradient(
+        135deg,
+        #2e3440 0%,
+        #3b4252 25%,
+        #434c5e 50%,
+        #4c566a 75%,
+        #2e3440 100%
+    ) !important;
+    background-attachment: fixed !important;
     color: #ffffff !important;
+    background-image: url('https://github.com/linuxdotexe/nordic-wallpapers/blob/master/wallpapers/nord_buildings.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Agregar un overlay oscuro para mejorar la legibilidad */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.85); /* Color oscuro con transparencia */
+    z-index: -1;
 }
 
 .card {
