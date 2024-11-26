@@ -26,10 +26,10 @@
             <div class="collapse navbar-collapse" id="navbarExample01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#blog">Blog</a>
+                        <a class="nav-link" href="index.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#about">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -53,20 +53,20 @@
             
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <form action="https://formspree.io/f/mrbgypqy" method="POST">
+                    <form action="https://formspree.io/f/TU-ENDPOINT" method="POST">
                         <div class="form-outline mb-4">
-                            <input type="text" name="name" class="form-control" required />
-                            <label class="form-label">Name</label>
+                            <input type="text" name="name" id="name" class="form-control active" required />
+                            <label class="form-label" for="name">Name</label>
                         </div>
 
                         <div class="form-outline mb-4">
-                            <input type="email" name="email" class="form-control" required />
-                            <label class="form-label">Email address</label>
+                            <input type="email" name="email" id="email" class="form-control active" required />
+                            <label class="form-label" for="email">Email address</label>
                         </div>
 
                         <div class="form-outline mb-4">
-                            <textarea name="message" class="form-control" rows="4" required></textarea>
-                            <label class="form-label">Message</label>
+                            <textarea name="message" id="message" class="form-control active" rows="4" required></textarea>
+                            <label class="form-label" for="message">Message</label>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
