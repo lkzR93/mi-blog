@@ -1,15 +1,8 @@
 body {
-    background: linear-gradient(
-        135deg,
-        #2e3440 0%,
-        #3b4252 25%,
-        #434c5e 50%,
-        #4c566a 75%,
-        #2e3440 100%
-    ) !important;
-    background-attachment: fixed !important;
+    background-color: #121212 !important;
     color: #ffffff !important;
-    background-image: url('https://github.com/linuxdotexe/nordic-wallpapers/blob/master/wallpapers/nord_buildings.png?raw=true');
+    background-image: url('../assets/img/background/nord_buildings.png');
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,9 +20,10 @@ body::before {
     z-index: -1;
 }
 
-.card {
-    background-color: #1e1e1e !important;
-    border: 1px solid #333 !important;
+/* Contenedores principales más transparentes */
+.card, .navbar, footer {
+    background-color: rgba(30, 30, 30, 0.85) !important;
+    backdrop-filter: blur(10px);
 }
 
 .card-text {
