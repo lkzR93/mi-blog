@@ -1,0 +1,114 @@
+body {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+.card {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333 !important;
+}
+
+.card-text {
+    color: #dddddd !important;
+}
+
+.navbar {
+    background-color: #1e1e1e !important;
+    border-bottom: 1px solid #333;
+}
+
+.bg-dark {
+    background-color: #121212 !important;
+}
+
+.text-dark {
+    color: #ffffff !important;
+}
+
+.bg-light {
+    background-color: #1e1e1e !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,1) !important;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(255,255,255,.9) !important;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgba(255,255,255,.5) !important;
+    color: rgba(255,255,255,.5) !important;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #bb86fc !important;
+}
+
+a:hover {
+    color: #9966ff !important;
+}
+
+/* Estilos para los botones */
+.btn-primary {
+    background-color: #bb86fc !important;
+    border-color: #bb86fc !important;
+    color: #000000 !important;
+}
+
+.btn-primary:hover {
+    background-color: #9966ff !important;
+    border-color: #9966ff !important;
+}
+
+/* Estilos para las cards */
+.card-footer {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-top: 1px solid #333 !important;
+}
+
+/* Estilos para el input y textarea si los tienes */
+input, textarea {
+    background-color: #333 !important;
+    border: 1px solid #444 !important;
+    color: #ffffff !important;
+}
+
+/* Estilos para el scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+/* Ajustar el brillo de las imágenes para que no sean tan brillantes en modo oscuro */
+img {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+img:hover {
+    opacity: 1;
+}
+
+/* Si tienes videos o iframes */
+iframe {
+    border: 1px solid #333 !important;
+} 
