@@ -1,132 +1,44 @@
 body {
     background-color: #121212 !important;
     color: #ffffff !important;
-    background-image: url('../assets/img/background/nord_buildings.png');
+    background-image: linear-gradient(
+        rgba(18, 18, 18, 0.75), 
+        rgba(44, 24, 9, 0.75)
+    ), url('../assets/img/background/coffee1.JPG');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* Agregar un overlay oscuro para mejorar la legibilidad */
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(18, 18, 18, 0.85); /* Color oscuro con transparencia */
-    z-index: -1;
+    display: none;
 }
 
-/* Contenedores principales más transparentes */
 .card, .navbar, footer {
-    background-color: rgba(30, 30, 30, 0.85) !important;
-    backdrop-filter: blur(10px);
+    background-color: rgba(30, 30, 30, 0.75) !important;
+    backdrop-filter: blur(5px);
 }
 
-.card-text {
-    color: #dddddd !important;
-}
-
-.navbar {
-    background-color: #1e1e1e !important;
-    border-bottom: 1px solid #333;
-}
-
-.bg-dark {
-    background-color: #121212 !important;
-}
-
-.text-dark {
-    color: #ffffff !important;
-}
-
-.bg-light {
-    background-color: #1e1e1e !important;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: rgba(255,255,255,.8) !important;
-}
-
-.navbar-light .navbar-nav .nav-link:hover {
-    color: rgba(255,255,255,1) !important;
-}
-
-.navbar-light .navbar-brand {
-    color: rgba(255,255,255,.9) !important;
-}
-
-.navbar-light .navbar-toggler {
-    border-color: rgba(255,255,255,.5) !important;
-    color: rgba(255,255,255,.5) !important;
-}
-
-/* Estilos para los enlaces */
-a {
-    color: #bb86fc !important;
-}
-
-a:hover {
-    color: #9966ff !important;
-}
-
-/* Estilos para los botones */
 .btn-primary {
-    background-color: #bb86fc !important;
-    border-color: #bb86fc !important;
-    color: #000000 !important;
+    background: linear-gradient(145deg, rgba(139, 69, 19, 0.9), rgba(101, 67, 33, 0.9)) !important;
+    border-color: rgba(139, 69, 19, 0.5) !important;
 }
 
 .btn-primary:hover {
-    background-color: #9966ff !important;
-    border-color: #9966ff !important;
+    background: linear-gradient(145deg, rgba(101, 67, 33, 0.9), rgba(139, 69, 19, 0.9)) !important;
 }
 
-/* Estilos para las cards */
-.card-footer {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border-top: 1px solid #333 !important;
-}
-
-/* Estilos para el input y textarea si los tienes */
-input, textarea {
-    background-color: #333 !important;
-    border: 1px solid #444 !important;
+.card-text {
     color: #ffffff !important;
 }
 
-/* Estilos para el scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
+.navbar {
+    background-color: rgba(30, 30, 30, 0.75) !important;
+    backdrop-filter: blur(5px);
 }
 
-::-webkit-scrollbar-track {
-    background: #1e1e1e;
+footer {
+    background: rgba(30, 30, 30, 0.75) !important;
+    backdrop-filter: blur(5px);
 }
-
-::-webkit-scrollbar-thumb {
-    background: #333;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #444;
-}
-
-/* Ajustar el brillo de las imágenes para que no sean tan brillantes en modo oscuro */
-img {
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-img:hover {
-    opacity: 1;
-}
-
-/* Si tienes videos o iframes */
-iframe {
-    border: 1px solid #333 !important;
-} 
