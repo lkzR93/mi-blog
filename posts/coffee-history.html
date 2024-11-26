@@ -147,9 +147,13 @@
     </footer>
 
     <!-- MDB -->
-    <script type="module" src="../js/mdb.es.min.js"></script>
-    <script>
+    <script type="module">
+        import * as mdb from "../js/mdb.es.min.js";
         document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Inicializar todos los componentes de MDB
+        document.querySelectorAll('[data-mdb-collapse-init]').forEach((element) => {
+            new mdb.Collapse(element);
+        });
     </script>
 </body>
 </html> 
