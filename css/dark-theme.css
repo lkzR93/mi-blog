@@ -135,3 +135,36 @@ footer {
 .card-body strong {
     color: #e0e0e0 !important;  /* Un poco más brillante para destacar */
 }
+
+/* Estilos para sticky footer */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* viewport height */
+}
+
+main {
+    flex: 1 0 auto;  /* Permite que el contenido principal se expanda */
+}
+
+footer {
+    flex-shrink: 0;  /* Evita que el footer se encoja */
+    width: 100%;
+    margin-top: auto;  /* Empuja el footer al final */
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        min-height: 100vh;
+    }
+    
+    main {
+        flex: 1;
+    }
+}
