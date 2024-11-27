@@ -1,14 +1,10 @@
-body {
-    background-color: #121212 !important;
+body.bg-dark {
+    background-color: transparent !important;
     color: #e0e0e0 !important;
     background-image: linear-gradient(
         rgba(18, 18, 18, 0.75), 
         rgba(44, 24, 9, 0.75)
-    ), url('../assets/img/background/coffee1.JPG');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    ), url('../assets/img/background/coffee1.JPG') !important;
 }
 
 body::before {
@@ -167,4 +163,16 @@ footer {
     main {
         flex: 1;
     }
+}
+
+body.bg-dark {
+    background-color: transparent !important;
+}
+
+.card {
+    background-color: rgba(33, 37, 41, 0.95) !important;
+}
+
+.navbar.bg-dark {
+    background-color: rgba(33, 37, 41, 0.95) !important;
 }

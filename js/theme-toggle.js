@@ -18,27 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
     themeToggle.addEventListener('click', function() {
         const isDark = !darkTheme.disabled;
         
-        // Cambiar temas
         darkTheme.disabled = isDark;
         lightTheme.disabled = !isDark;
         
-        // Cambiar icono
         icon.classList.toggle('fa-moon');
         icon.classList.toggle('fa-sun');
         
-        // Cambiar clases del body
         document.body.classList.toggle('bg-dark');
         document.body.classList.toggle('text-white');
         document.body.classList.toggle('bg-light');
         document.body.classList.toggle('text-dark');
         
-        // Guardar preferencia
         localStorage.setItem('theme', isDark ? 'light' : 'dark');
-        
-        // Reaplicar traducciones después del cambio de tema
-        const currentLang = document.documentElement.lang;
-        if (window.applyTranslations) {
-            window.applyTranslations(currentLang);
-        }
     });
 }); 
