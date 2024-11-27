@@ -1,48 +1,44 @@
-// Función para manejar el cambio de tema
-function toggleTheme() {
-    const darkTheme = document.querySelector('link[href="css/dark-theme.css"]');
-    const lightTheme = document.querySelector('link[href="css/light-theme.css"]');
-    const themeIcon = document.querySelector('#theme-toggle i');
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const icon = themeToggle.querySelector('i');
+    const darkTheme = document.querySelector('link[href*="dark-theme"]');
+    const lightTheme = document.querySelector('link[href*="light-theme"]');
     
-    // Si el tema oscuro está activo
-    if (darkTheme.disabled === false) {
-        darkTheme.disabled = true;
-        lightTheme.disabled = false;
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-        localStorage.setItem('theme', 'light');
-    } else {
-        darkTheme.disabled = false;
-        lightTheme.disabled = true;
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-        localStorage.setItem('theme', 'dark');
-    }
-}
-
-// Función para cargar el tema guardado
-function loadSavedTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    const darkTheme = document.querySelector('link[href="css/dark-theme.css"]');
-    const lightTheme = document.querySelector('link[href="css/light-theme.css"]');
-    const themeIcon = document.querySelector('#theme-toggle i');
-
+    // Cargar preferencia guardada
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     if (savedTheme === 'light') {
         darkTheme.disabled = true;
         lightTheme.disabled = false;
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-    } else {
-        darkTheme.disabled = false;
-        lightTheme.disabled = true;
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        document.body.classList.remove('bg-dark', 'text-white');
+        document.body.classList.add('bg-light', 'text-dark');
     }
-}
 
-// Agregar el event listener al botón
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    themeToggle.addEventListener('click', toggleTheme);
-    loadSavedTheme();
+    themeToggle.addEventListener('click', function() {
+        const isDark = !darkTheme.disabled;
+        
+        // Cambiar temas
+        darkTheme.disabled = isDark;
+        lightTheme.disabled = !isDark;
+        
+        // Cambiar icono
+        icon.classList.toggle('fa-moon');
+        icon.classList.toggle('fa-sun');
+        
+        // Cambiar clases del body
+        document.body.classList.toggle('bg-dark');
+        document.body.classList.toggle('text-white');
+        document.body.classList.toggle('bg-light');
+        document.body.classList.toggle('text-dark');
+        
+        // Guardar preferencia
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        
+        // Reaplicar traducciones después del cambio de tema
+        const currentLang = document.documentElement.lang;
+        if (window.applyTranslations) {
+            window.applyTranslations(currentLang);
+        }
+    });
 }); 

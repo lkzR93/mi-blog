@@ -59,13 +59,13 @@ const translations = {
         'coffee-legend-title': '발견의 전설',
         'coffee-legend-text': '커피의 이야기는 에티오피아에서 시작됩니다. 전설에 따르면, 칼디라는 이름의 염소치기가 자신의 염소들이 특정 나무의 열매를 먹은 후 비정상적으로 활기차진 것을 발견하고 커피를 발견했습니다. 이 관찰에 흥미를 느낀 칼디는 직접 열매를 시도해보았고 비슷한 에너지 상승을 경험했습니다. 그는 이 발견을 지역 수도사들과 공유했고, 수도사들은 긴 기도 시간 동안 깨어있기 위해 이 열매를 사용하기 시작했습니다. 🐐',
         'coffee-journey-title': '세계적인 여정',
-        'coffee-journey-text': '에티오피아에서 시작된 커피는 15세기에 예멘으로 퍼져나가 재배되고 거래되었습니다. 모카 항구는 커피의 대명사가 되었습니다. 16세기까지 커피는 중동, 페르시아, 터키, 북아프리카 전역에 도달했습니다. 유럽 여행자들이 이 특이한 검은 음료에 대한 이야기를 가져왔고, 17세기에는 커피가 유럽에 진출했습니다. ⛵',
+        'coffee-journey-text': '에티오피아에서 시작된 커피는 15세기에 예멘으로 퍼져나가 재배되고 거래되었습니다. 모카 항구는 커피의 대명사가 되었습니다. 16세기까��� 커피는 중동, 페르시아, 터키, 북아프리카 전역에 도달했습니다. 유럽 여행자들이 이 특이한 검은 음료에 대한 이야기를 가져왔고, 17세기에는 커피가 유럽에 진출했습니다. ⛵',
         'coffee-benefits-title': '개발자와 창작자를 위한 이점',
         'coffee-benefits-intro': '오늘날 커피는 단순한 음료가 아닙니다 - 많은 개발자와 창의적 전문가들에게 필수적인 동반자입니다. 그 이유는 다음과 같습니다:',
         'coffee-benefit-1': '<strong>집중력 향상:</strong> 커피는 피로감을 유발하는 아데노신을 차단함으로써 긴 코딩 세션 동안 집중력을 유지하는 데 도움을 줍니다.',
         'coffee-benefit-2': '<strong>인지 능력 향상:</strong> 연구에 따르면 카페인은 프로그래밍에 필수적인 문제 해결 능력과 논리적 사고력을 향상시킬 수 있습니다.',
         'coffee-benefit-3': '<strong>기억력 향상:</strong> 커피는 단기 기억력과 새로운 정보를 처리하는 능력을 향상시켜 개발자들이 복잡한 코드 구조를 다루는 데 도움을 줍니다.',
-        'coffee-benefit-4': '<strong>각성 상태 유지:</strong> 커피의 카페인은 특히 디버깅 세션이나 복잡한 알고리즘 작업 중에 정신적 각성 상태를 유지하는 데 도움을 줍니다.',
+        'coffee-benefit-4': '<strong>각성 상태 유지:</strong> 커피의 카페인은 특히 디버깅 세션이나 복잡한 알고리즘 작업 중에 정신적 각성 상태��� 유지하는 데 도움을 줍니다.',
         'coffee-benefit-5': '<strong>기분 개선:</strong> 커피는 도파민 수준을 높여 도전적인 개발 작업 중에도 긍정적인 기분을 유지하는 데 도움을 줍니다.',
         'coffee-impact-title': '현대적 영향',
         'coffee-impact-text': '커피는 특히 기술 회사와 창의적 공간에서 현대 업무 문화의 필수적인 부분이 되었습니다. 시애틀의 커피 문화가 기술 산업에 미치는 영향부터 전 세계 커피숍에서 작성되는 수많은 코드 라인까지, 이 고대의 음료는 계속해서 디지털 시대의 혁신과 창의성을 촉진하고 있습니다. ⌨️',
@@ -75,15 +75,18 @@ const translations = {
     }
 };
 
-// Actualizar metatags cuando cambie el idioma
-const metaTags = {
-    title: document.querySelector('title'),
-    description: document.querySelector('meta[name="description"]'),
-    ogTitle: document.querySelector('meta[property="og:title"]'),
-    ogDescription: document.querySelector('meta[property="og:description"]'),
-    twitterTitle: document.querySelector('meta[property="twitter:title"]'),
-    twitterDescription: document.querySelector('meta[property="twitter:description"]')
-};
+function applyTranslations(lang) {
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (translations[lang][key].includes('<')) {
+                element.innerHTML = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+}
 
 function toggleLanguage() {
     const currentLang = document.documentElement.lang;
@@ -93,21 +96,7 @@ function toggleLanguage() {
     document.documentElement.lang = newLang;
     langIndicator.textContent = newLang.toUpperCase();
     
-    // Translate all elements with data-translate attribute
-    document.querySelectorAll('[data-translate]').forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[newLang][key]) {
-            // Si el texto contiene HTML, usamos innerHTML
-            if (translations[newLang][key].includes('<')) {
-                element.innerHTML = translations[newLang][key];
-            } else {
-                // Si es texto plano, usamos textContent
-                element.textContent = translations[newLang][key];
-            }
-        }
-    });
-    
-    // Save preference
+    applyTranslations(newLang);
     localStorage.setItem('language', newLang);
 }
 
@@ -115,30 +104,20 @@ function toggleLanguage() {
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('language') || 'en';
     
-    // Aplicar el idioma guardado inmediatamente
     if (savedLang !== document.documentElement.lang) {
         document.documentElement.lang = savedLang;
         const langIndicator = document.querySelector('.lang-indicator');
         if (langIndicator) {
             langIndicator.textContent = savedLang.toUpperCase();
         }
-        
-        // Traducir todos los elementos
-        document.querySelectorAll('[data-translate]').forEach(element => {
-            const key = element.getAttribute('data-translate');
-            if (translations[savedLang][key]) {
-                if (translations[savedLang][key].includes('<')) {
-                    element.innerHTML = translations[savedLang][key];
-                } else {
-                    element.textContent = translations[savedLang][key];
-                }
-            }
-        });
+        applyTranslations(savedLang);
     }
     
-    // Agregar el evento click
     const languageToggle = document.getElementById('language-toggle');
     if (languageToggle) {
         languageToggle.addEventListener('click', toggleLanguage);
     }
-}); 
+});
+
+// Exportar la función para que theme-toggle.js pueda usarla
+window.applyTranslations = applyTranslations; 
