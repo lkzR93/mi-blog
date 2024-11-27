@@ -4,7 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Minisland ☕</title>
+    
+    <!-- SEO Metatags -->
+    <title>Minisland - A Personal Tech & Coffee Blog</title>
+    <meta name="description" content="Explore technology, development, and coffee culture through the lens of a passionate developer. Discover coding insights and coffee stories." />
+    <meta name="keywords" content="tech blog, development, coffee, programming, web development" />
+    <meta name="author" content="Lucas" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lkzr93.github.io/minisland/" />
+    <meta property="og:title" content="Minisland - A Personal Tech & Coffee Blog" />
+    <meta property="og:description" content="Explore technology, development, and coffee culture through the lens of a passionate developer." />
+    <meta property="og:image" content="https://lkzr93.github.io/minisland/assets/img/posts/coffee-history.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://lkzr93.github.io/minisland/" />
+    <meta property="twitter:title" content="Minisland - A Personal Tech & Coffee Blog" />
+    <meta property="twitter:description" content="Explore technology, development, and coffee culture through the lens of a passionate developer." />
+    <meta property="twitter:image" content="https://lkzr93.github.io/minisland/assets/img/posts/coffee-history.jpg" />
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
     <!-- Google Fonts Roboto -->
@@ -19,13 +39,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="css/typography.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="css/back-to-top.css" rel="stylesheet" />
 </head>
 <body class="bg-dark text-white">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.html" data-translate="brand">
            Mini ☕
         </a>
         <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#navbarExample01"
@@ -35,13 +56,13 @@
         <div class="collapse navbar-collapse" id="navbarExample01">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Blog</a>
+              <a class="nav-link" href="index.html" data-translate="blog">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="about.html" data-translate="about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
             </li>
           </ul>
 
@@ -49,6 +70,11 @@
             <li class="nav-item me-3 me-lg-0">
               <button class="btn btn-link nav-link" id="theme-toggle">
                   <i class="fas fa-moon"></i>
+              </button>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <button class="btn btn-link nav-link" id="language-toggle">
+                  <span class="lang-indicator">EN</span>
               </button>
             </li>
             <li class="nav-item me-3 me-lg-0">
@@ -64,8 +90,8 @@
     <main>
         <!-- Jumbotron -->
         <div id="intro" class="p-4 text-center bg-dark mt-5 pt-4">
-            <h1 class="mb-0 h2">Welcome to Minisland</h1>
-            <p class="mb-2">A personal blog about technology and development</p>
+            <h1 class="mb-4" data-translate="welcome">Welcome to Minisland</h1>
+            <h2 class="h5 mb-4" data-translate="latest-posts">Latest posts</h2>
         </div>
 
         <div class="container my-5">
@@ -74,27 +100,28 @@
                 <h4 class="mb-5"><strong>Latest posts</strong></h4>
 
                 <div class="row">
+                    <!-- Coffee History Post -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card">
                             <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
                                 <img src="assets/img/posts/coffee-history.jpg" 
                                      class="img-fluid"
-                                     style="aspect-ratio: 3/2; object-fit: cover; width: 100%;" 
                                      alt="Ancient coffee beans and brewing" />
                                 <a href="#!">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                                 </a>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">The Origins of Coffee: A Brief History ☕</h5>
-                                <p class="card-text">
+                                <h5 class="card-title" data-translate="coffee-history-title">The Origins of Coffee: A Brief History ☕</h5>
+                                <p class="card-text" data-translate="coffee-history-desc">
                                     Discover how coffee evolved from Ethiopian forests to become developers' favorite productivity companion.
                                 </p>
-                                <a href="posts/coffee-history.html" class="btn btn-primary" data-mdb-ripple-init>Read</a>
+                                <a href="posts/coffee-history.html" class="btn btn-primary" data-mdb-ripple-init data-translate="read">Read</a>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Post 2 (Vacío) -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card">
                             <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
@@ -111,6 +138,7 @@
                         </div>
                     </div>
 
+                    <!-- Post 3 (Vacío) -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card">
                             <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
@@ -133,7 +161,7 @@
 
     <footer class="bg-dark text-lg-start">
         <div class="text-center py-4 align-items-center">
-            <p>Follow me on GitHub</p>
+            <p data-translate="follow-github">Follow me on GitHub</p>
             <a href="https://github.com/lkzR93" class="btn btn-primary m-1" role="button" data-mdb-ripple-init
                 target="_blank">
                 <i class="fab fa-github"></i>
@@ -142,7 +170,7 @@
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.1);">
-            © <span id="current-year"></span> Copyright:
+            <span data-translate="copyright">© </span><span id="current-year"></span> Copyright:
             <a class="text-white" href="#">Minisland</a>
         </div>
         <!-- Copyright -->
@@ -158,5 +186,8 @@
         });
     </script>
     <script src="js/theme-toggle.js"></script>
+    <script src="js/image-loading.js"></script>
+    <script src="js/language-toggle.js"></script>
+    <script src="js/back-to-top.js"></script>
 </body>
 </html>

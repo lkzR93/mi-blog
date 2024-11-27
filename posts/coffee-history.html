@@ -4,7 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>The Origins of Coffee - Minisland</title>
+    
+    <!-- SEO Metatags -->
+    <title>The Origins of Coffee: A Brief History - Minisland</title>
+    <meta name="description" content="Discover the fascinating journey of coffee from Ethiopian forests to becoming the world's favorite productivity drink." />
+    <meta name="keywords" content="coffee history, coffee origins, Ethiopian coffee, coffee culture, coffee development" />
+    <meta name="author" content="Lucas" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://lkzr93.github.io/minisland/posts/coffee-history.html" />
+    <meta property="og:title" content="The Origins of Coffee: A Brief History" />
+    <meta property="og:description" content="Discover how coffee evolved from Ethiopian forests to become developers' favorite productivity companion." />
+    <meta property="og:image" content="https://lkzr93.github.io/minisland/assets/img/posts/coffee-history.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://lkzr93.github.io/minisland/posts/coffee-history.html" />
+    <meta property="twitter:title" content="The Origins of Coffee: A Brief History" />
+    <meta property="twitter:description" content="Discover how coffee evolved from Ethiopian forests to become developers' favorite productivity companion." />
+    <meta property="twitter:image" content="https://lkzr93.github.io/minisland/assets/img/posts/coffee-history.jpg" />
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
     <!-- Google Fonts Roboto -->
@@ -16,9 +36,10 @@
     <link href="../css/dark-theme.css" rel="stylesheet" />
     <link href="../css/light-theme.css" rel="stylesheet" disabled />
     <link href="../css/animations.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="../css/typography.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link href="../css/back-to-top.css" rel="stylesheet" />
+    <script src="../js/language-toggle.js"></script>
 </head>
 
 <body class="bg-dark text-white">
@@ -26,7 +47,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <!-- Navbar brand -->
-            <a class="navbar-brand" href="../index.html">
+            <a class="navbar-brand" href="../index.html" data-translate="brand">
                 Mini ☕
             </a>
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
@@ -36,21 +57,29 @@
             <div class="collapse navbar-collapse" id="navbarExample01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Blog</a>
+                        <a class="nav-link" href="../index.html" data-translate="blog">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../about.html">About</a>
+                        <a class="nav-link" href="../about.html" data-translate="about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../contact.html">Contact</a>
+                        <a class="nav-link" href="../contact.html" data-translate="contact">Contact</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
+                    <!-- Theme Toggle -->
                     <li class="nav-item me-3 me-lg-0">
                         <button class="btn btn-link nav-link" id="theme-toggle">
                             <i class="fas fa-moon"></i>
                         </button>
                     </li>
+                    <!-- Language Toggle -->
+                    <li class="nav-item me-3 me-lg-0">
+                        <button class="btn btn-link nav-link" id="language-toggle">
+                            <span class="lang-indicator">EN</span>
+                        </button>
+                    </li>
+                    <!-- GitHub -->
                     <li class="nav-item me-3 me-lg-0">
                         <a class="nav-link" href="https://github.com/lkzR93" target="_blank">
                             <i class="fab fa-github"></i>
@@ -63,18 +92,23 @@
 
     <main>
         <!-- Post Content -->
-        <div class="container my-5 pt-5">
+        <div class="container my-5">
+            <h1 class="mb-4" data-translate="coffee-post-title">The Origins of Coffee: A Brief History</h1>
+            <p data-translate="coffee-post-intro">Discover the fascinating journey of coffee from Ethiopian forests to becoming the world's favorite productivity drink.</p>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <article class="card">
-                        <img src="../assets/img/posts/coffee-history.jpg" 
-                             class="card-img-top" 
-                             alt="Ancient coffee beans and brewing"
-                             style="height: 200px; object-fit: cover; object-position: center;" />
+                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img src="../assets/img/posts/coffee-history.jpg" 
+                                 class="card-img-top" 
+                                 style="height: 200px; object-fit: cover; object-position: center;"
+                                 alt="Ancient coffee beans and brewing" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
                         
                         <div class="card-body">
-                            <h1 class="card-title mb-4">The Origins of Coffee: A Brief History ☕</h1>
-                            
                             <div class="mb-4">
                                 <h2>The Legend of Discovery</h2>
                                 <p>
@@ -146,7 +180,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-lg-start">
         <div class="text-center py-4 align-items-center">
-            <p>Follow me on GitHub</p>
+            <p data-translate="follow-github">Follow me on GitHub</p>
             <a href="https://github.com/lkzR93" class="btn btn-primary m-1" role="button" 
                data-mdb-ripple-init target="_blank">
                 <i class="fab fa-github"></i>
@@ -155,7 +189,7 @@
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.1);">
-            © <span id="current-year"></span> Copyright:
+            <span data-translate="copyright">© </span><span id="current-year"></span> Copyright:
             <a class="text-white" href="#">Minisland</a>
         </div>
     </footer>
@@ -165,10 +199,17 @@
         import * as mdb from "../js/mdb.es.min.js";
         document.getElementById('current-year').textContent = new Date().getFullYear();
         // Inicializar todos los componentes de MDB
-        document.querySelectorAll('[data-mdb-collapse-init]').forEach((element) => {
+        document.querySelectorAll('[data-mdb-toggle="collapse"]').forEach((element) => {
             new mdb.Collapse(element);
         });
     </script>
     <script src="../js/theme-toggle.js"></script>
+    <script src="../js/image-loading.js"></script>
+    <script src="../js/back-to-top.js"></script>
+
+    <!-- Asegurarnos de que el botón esté en el lugar correcto -->
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html> 

@@ -4,8 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    
+    <!-- SEO Metatags -->
     <title>Contact - Minisland</title>
-    <!-- Font Awesome -->
+    <meta name="description" content="Get in touch with Minisland's developer. Share your thoughts about technology, development, or coffee." />
+    <meta name="keywords" content="contact, get in touch, feedback, tech blog contact" />
+    <meta name="author" content="Lucas" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lkzr93.github.io/minisland/contact.html" />
+    <meta property="og:title" content="Contact - Minisland" />
+    <meta property="og:description" content="Get in touch with Minisland's developer. Share your thoughts about technology or coffee." />
+    <meta property="og:image" content="https://lkzr93.github.io/minisland/assets/img/posts/coffee-history.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://lkzr93.github.io/minisland/contact.html" />
+    <meta property="twitter:title" content="Contact - Minisland" />
+    <meta property="twitter:description" content="Get in touch with Minisland's developer. Share your thoughts about technology or coffee." />
+    <meta property="twitter:image" content="https://lkzr93.github.io/minisland/assets/img/posts/coffee-history.jpg" />
+    
+    <!-- Resto de tus enlaces CSS actuales -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
@@ -19,13 +39,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="css/typography.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="css/back-to-top.css" rel="stylesheet" />
+    <script src="js/language-toggle.js"></script>
 </head>
 
 <body class="bg-dark text-white">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.html" data-translate="brand">
                 Mini ☕
             </a>
             <button 
@@ -41,19 +63,24 @@
             <div class="collapse navbar-collapse" id="navbarExample01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Blog</a>
+                        <a class="nav-link" href="index.html" data-translate="blog">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about.html" data-translate="about">About</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row">
                     <li class="nav-item me-3 me-lg-0">
                         <button class="btn btn-link nav-link" id="theme-toggle">
                             <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <button class="btn btn-link nav-link" id="language-toggle">
+                            <span class="lang-indicator">EN</span>
                         </button>
                     </li>
                     <li class="nav-item me-3 me-lg-0">
@@ -69,27 +96,27 @@
     <main>
         <!-- Contact Content -->
         <div class="container my-5 pt-5">
-            <h2 class="text-center mb-5">Contact Me</h2>
+            <h2 class="text-center mb-5" data-translate="contact-title">Contact Me</h2>
             
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <form action="https://formspree.io/f/TU-ENDPOINT" method="POST">
                         <div class="form-outline mb-4">
                             <input type="text" name="name" id="name" class="form-control active" required />
-                            <label class="form-label" for="name">Name</label>
+                            <label class="form-label" for="name" data-translate="name">Name</label>
                         </div>
 
                         <div class="form-outline mb-4">
                             <input type="email" name="email" id="email" class="form-control active" required />
-                            <label class="form-label" for="email">Email address</label>
+                            <label class="form-label" for="email" data-translate="email">Email address</label>
                         </div>
 
                         <div class="form-outline mb-4">
                             <textarea name="message" id="message" class="form-control active" rows="4" required></textarea>
-                            <label class="form-label" for="message">Message</label>
+                            <label class="form-label" for="message" data-translate="message">Message</label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+                        <button type="submit" class="btn btn-primary btn-block mb-4" data-translate="send">Send</button>
                     </form>
                 </div>
             </div>
@@ -99,7 +126,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-lg-start">
         <div class="text-center py-4 align-items-center">
-            <p>Follow me on GitHub</p>
+            <p data-translate="follow-github">Follow me on GitHub</p>
             <a href="https://github.com/lkzR93" class="btn btn-primary m-1" role="button" data-mdb-ripple-init
                 target="_blank">
                 <i class="fab fa-github"></i>
@@ -108,20 +135,20 @@
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.1);">
-            © <span id="current-year"></span> Copyright:
+            <span data-translate="copyright">© </span><span id="current-year"></span> Copyright:
             <a class="text-white" href="#">Minisland</a>
         </div>
     </footer>
 
-    <!-- MDB -->
+    <!-- Scripts -->
     <script type="module">
         import * as mdb from "./js/mdb.es.min.js";
         document.getElementById('current-year').textContent = new Date().getFullYear();
-        // Inicializar todos los componentes de MDB
         document.querySelectorAll('[data-mdb-toggle="collapse"]').forEach((element) => {
             new mdb.Collapse(element);
         });
     </script>
     <script src="js/theme-toggle.js"></script>
+    <script src="js/language-toggle.js"></script>
 </body>
 </html> 
