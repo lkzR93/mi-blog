@@ -31,7 +31,10 @@ const translations = {
         'coffee-benefit-4': '<strong>Increased Alertness:</strong> The caffeine in coffee helps maintain mental alertness, especially during debugging sessions or when working with intricate algorithms.',
         'coffee-benefit-5': '<strong>Mood Enhancement:</strong> Coffee can boost dopamine levels, helping maintain a positive mood during challenging development tasks.',
         'coffee-impact-title': 'Modern Impact',
-        'coffee-impact-text': 'Coffee has become an integral part of modern work culture, especially in tech companies and creative spaces. From Seattle\'s coffee culture influencing the tech industry to the countless lines of code written in coffee shops worldwide, this ancient beverage continues to fuel innovation and creativity in the digital age. ⌨️'
+        'coffee-impact-text': 'Coffee has become an integral part of modern work culture, especially in tech companies and creative spaces. From Seattle\'s coffee culture influencing the tech industry to the countless lines of code written in coffee shops worldwide, this ancient beverage continues to fuel innovation and creativity in the digital age. ⌨️',
+        'coffee-card-title': 'The Origins of Coffee: A Brief History ☕',
+        'coffee-card-description': 'Discover how coffee evolved from Ethiopian forests to become developers\' favorite productivity companion.',
+        'read-more': 'Read'
     },
     ko: {
         // Navbar
@@ -65,7 +68,10 @@ const translations = {
         'coffee-benefit-4': '<strong>각성 상태 유지:</strong> 커피의 카페인은 특히 디버깅 세션이나 복잡한 알고리즘 작업 중에 정신적 각성 상태를 유지하는 데 도움을 줍니다.',
         'coffee-benefit-5': '<strong>기분 개선:</strong> 커피는 도파민 수준을 높여 도전적인 개발 작업 중에도 긍정적인 기분을 유지하는 데 도움을 줍니다.',
         'coffee-impact-title': '현대적 영향',
-        'coffee-impact-text': '커피는 특히 기술 회사와 창의적 공간에서 현대 업무 문화의 필수적인 부분이 되었습니다. 시애틀의 커피 문화가 기술 산업에 미치는 영향부터 전 세계 커피숍에서 작성되는 수많은 코드 라인까지, 이 고대의 음료는 계속해서 디지털 시대의 혁신과 창의성을 촉진하고 있습니다. ⌨️'
+        'coffee-impact-text': '커피는 특히 기술 회사와 창의적 공간에서 현대 업무 문화의 필수적인 부분이 되었습니다. 시애틀의 커피 문화가 기술 산업에 미치는 영향부터 전 세계 커피숍에서 작성되는 수많은 코드 라인까지, 이 고대의 음료는 계속해서 디지털 시대의 혁신과 창의성을 촉진하고 있습니다. ⌨️',
+        'coffee-card-title': '커피의 기원: 간단한 역사 ☕',
+        'coffee-card-description': '에티오피아 숲에서 개발자들이 가장 선호하는 생산성 동반자가 되기까지의 커피의 진화를 발견하세요.',
+        'read-more': '읽기'
     }
 };
 
@@ -108,12 +114,31 @@ function toggleLanguage() {
 // Initialize language
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('language') || 'en';
-    if (savedLang !== 'en') {
+    
+    // Aplicar el idioma guardado inmediatamente
+    if (savedLang !== document.documentElement.lang) {
         document.documentElement.lang = savedLang;
-        document.querySelector('.lang-indicator').textContent = savedLang.toUpperCase();
-        toggleLanguage();
+        const langIndicator = document.querySelector('.lang-indicator');
+        if (langIndicator) {
+            langIndicator.textContent = savedLang.toUpperCase();
+        }
+        
+        // Traducir todos los elementos
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            if (translations[savedLang][key]) {
+                if (translations[savedLang][key].includes('<')) {
+                    element.innerHTML = translations[savedLang][key];
+                } else {
+                    element.textContent = translations[savedLang][key];
+                }
+            }
+        });
     }
     
-    // Add click event
-    document.getElementById('language-toggle').addEventListener('click', toggleLanguage);
+    // Agregar el evento click
+    const languageToggle = document.getElementById('language-toggle');
+    if (languageToggle) {
+        languageToggle.addEventListener('click', toggleLanguage);
+    }
 }); 
