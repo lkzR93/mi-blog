@@ -17,7 +17,18 @@ const translations = {
         'name': 'Name',
         'email': 'Email address',
         'message': 'Message',
-        'send': 'Send'
+        'send': 'Send',
+        'brand': 'Mini ☕',
+        'blog': 'Blog',
+        'about': 'About',
+        'contact': 'Contact',
+        'follow-github': 'Follow me on GitHub',
+        'copyright': '© ',
+        'welcome': 'Welcome to Minisland',
+        'latest-posts': 'Latest posts',
+        'coffee-card-title': 'The Origins of Coffee: A Brief History ☕',
+        'coffee-card-description': 'Discover how coffee evolved from Ethiopian forests to become developers\' favorite productivity companion.',
+        'read-more': 'Read'
     },
     ko: {
         'about-title': '내 소개',
@@ -37,7 +48,18 @@ const translations = {
         'name': '이름',
         'email': '이메일 주소',
         'message': '메시지',
-        'send': '보내기'
+        'send': '보내기',
+        'brand': 'Mini ☕',
+        'blog': '블로그',
+        'about': '소개',
+        'contact': '연락하기',
+        'follow-github': 'GitHub에서 팔로우하기',
+        'copyright': '© ',
+        'welcome': 'Minisland에 오신 것을 환영합니다',
+        'latest-posts': '최신 게시물',
+        'coffee-card-title': '커피의 기원: 간단한 역사 ☕',
+        'coffee-card-description': '에티오피아 숲에서 개발자들이 가장 좋아하는 생산성 동반자가 되기까지의 커피의 진화를 발견해보세요.',
+        'read-more': '읽기'
     }
 };
 
