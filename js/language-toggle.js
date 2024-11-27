@@ -11,7 +11,13 @@ const translations = {
         'skill-3': 'Skill 3',
         'skill-4': 'Skill 4',
         'skill-5': 'Skill 5',
-        'skill-6': 'Skill 6'
+        'skill-6': 'Skill 6',
+        'contact-title': 'Contact Me',
+        'contact-description': 'Get in touch with me for any questions or suggestions.',
+        'name': 'Name',
+        'email': 'Email address',
+        'message': 'Message',
+        'send': 'Send'
     },
     ko: {
         'about-title': '내 소개',
@@ -25,7 +31,13 @@ const translations = {
         'skill-3': '기술 3',
         'skill-4': '기술 4',
         'skill-5': '기술 5',
-        'skill-6': '기술 6'
+        'skill-6': '기술 6',
+        'contact-title': '연락하기',
+        'contact-description': '질문이나 제안이 있으시면 연락 주세요.',
+        'name': '이름',
+        'email': '이메일 주소',
+        'message': '메시지',
+        'send': '보내기'
     }
 };
 
